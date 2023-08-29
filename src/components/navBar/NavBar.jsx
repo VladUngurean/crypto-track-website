@@ -18,7 +18,7 @@ export default function NavBar() {
             Choose Up
           </a>
           <a href="#" className="nav_links">
-            Joinn
+            Join
           </a>
         </div>
         <div className=" w-[70px] flex justify-between">
