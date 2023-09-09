@@ -21,109 +21,111 @@ function CryptoTable({ itemsPerPage, data }) {
   const totalPages = Math.ceil(data.length / itemsPerPage);
 
   return (
-    <div className="max-w-screen-lg mx-auto text-white shadow overflow-hidden sm:rounded-lg">
-      <div className="px-4 py-5 sm:px-6">
+    <>
+      <div className="max-w-screen-lg mx-auto px-4 py-5 sm:px-6 text-white">
         <h3 className="text-3xl leading-6 font-medium">Market Update</h3>
       </div>
-      <div>
-        <table className="min-w-full ">
-          <thead>
-            <tr className="bg-gradient-to-r from-[#2100fc] to-[#ff00ff]">
-              <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
-                Name
-              </th>
-              <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
-                Current Price
-              </th>
-              <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
-                24h Change
-              </th>
-              <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
-                Market Cap
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {displayData.map((list, index) => (
-              <tr
-                key={index}
-                className="hover:bg-gray-800 transition duration-150 ease-in-out border-y"
-              >
-                <td className="px-6 py-4 whitespace-no-wrap">
-                  <div className="flex items-center">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="h-12 w-12 rounded-full"
-                        src={list.image}
-                        alt="Crypto Image"
-                      />
-                    </div>
-                    <div className="ml-4">
-                      <div className="text-sm leading-5 font-medium text-gray-100">
-                        {list.name}
+      <div className="max-w-screen-lg mx-auto text-white shadow overflow-hidden rounded-lg">
+        <div>
+          <table className="min-w-full ">
+            <thead>
+              <tr className="bg-gradient-to-r from-[#2100fc] to-[#ff00ff]">
+                <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+                  Name
+                </th>
+                <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+                  Current Price
+                </th>
+                <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+                  24h Change
+                </th>
+                <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+                  Market Cap
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {displayData.map((list, index) => (
+                <tr
+                  key={index}
+                  className="hover:bg-gray-800 transition duration-150 ease-in-out border-b"
+                >
+                  <td className="px-6 py-4 whitespace-no-wrap">
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0">
+                        <img
+                          className="h-12 w-12 rounded-full"
+                          src={list.image}
+                          alt="Crypto Image"
+                        />
+                      </div>
+                      <div className="ml-4">
+                        <div className="text-sm leading-5 font-medium text-gray-100">
+                          {list.name}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap">
-                  <div className="text-sm leading-5 text-gray-100">
-                    $ {list.current_price.toLocaleString("en-US")}
-                  </div>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap">
-                  <span
-                    className={` text-sm leading-5 ${
-                      list.market_cap_change_percentage_24h >= 0
-                        ? "text-green-600"
-                        : "text-red-600"
-                    }`}
-                  >
-                    {list.market_cap_change_percentage_24h.toFixed(2)}%
-                  </span>
-                </td>
-                <td className="px-6 py-4 whitespace-no-wrap">
-                  <div className="text-sm leading-5 text-gray-100">
-                    $ {list.market_cap.toLocaleString("en-US")}
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-      {/* Centered Pagination controls */}
-      <div className="px-4 py-3 text-center">
-        <button
-          onClick={() => setCurrentPage(currentPage - 1)}
-          disabled={currentPage === 1}
-          className=" mr-1 inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-100 bg-gray-700 hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
-        >
-          Previous
-        </button>
-        <div className="inline-flex space-x-2">
-          {Array.from({ length: totalPages }, (_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentPage(i + 1)}
-              className={`px-3 py-2 text-sm leading-5 ${
-                currentPage === i + 1
-                  ? "bg-gray-700 text-gray-200 rounded"
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-gray-200 rounded"
-              }`}
-            >
-              {i + 1}
-            </button>
-          ))}
+                  </td>
+                  <td className="px-6 py-4 whitespace-no-wrap">
+                    <div className="text-sm leading-5 text-gray-100">
+                      $ {list.current_price.toLocaleString("en-US")}
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-no-wrap">
+                    <span
+                      className={` text-sm leading-5 ${
+                        list.market_cap_change_percentage_24h >= 0
+                          ? "text-green-600"
+                          : "text-red-600"
+                      }`}
+                    >
+                      {list.market_cap_change_percentage_24h.toFixed(2)}%
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-no-wrap">
+                    <div className="text-sm leading-5 text-gray-100">
+                      $ {list.market_cap.toLocaleString("en-US")}
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-        <button
-          onClick={() => setCurrentPage(currentPage + 1)}
-          disabled={currentPage >= totalPages}
-          className=" ml-1 inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-100 bg-gray-700 hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
-        >
-          Next
-        </button>
+        {/* Centered Pagination controls */}
+        <div className="px-4 py-3 text-center">
+          <button
+            onClick={() => setCurrentPage(currentPage - 1)}
+            disabled={currentPage === 1}
+            className=" mr-1 inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-100 bg-gray-700 hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
+          >
+            Previous
+          </button>
+          <div className="inline-flex space-x-2">
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentPage(i + 1)}
+                className={`px-3 py-2 text-sm leading-5 ${
+                  currentPage === i + 1
+                    ? "bg-gray-700 text-gray-200 rounded"
+                    : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-gray-200 rounded"
+                }`}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </div>
+          <button
+            onClick={() => setCurrentPage(currentPage + 1)}
+            disabled={currentPage >= totalPages}
+            className=" ml-1 inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md text-gray-100 bg-gray-700 hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
+          >
+            Next
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
