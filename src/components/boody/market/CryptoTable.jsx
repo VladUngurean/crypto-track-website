@@ -15,7 +15,9 @@ function CryptoTable({ itemsPerPage, data }) {
 
   if (!data.length) {
     // If data is not available yet, you can show a loading message or spinner
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center text-white text-2xl">Loading...</div>
+    );
   }
 
   const totalPages = Math.ceil(data.length / itemsPerPage);

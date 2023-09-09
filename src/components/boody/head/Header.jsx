@@ -1,17 +1,17 @@
 export default function Header() {
   return (
     <>
-      <div className=" max-w-screen-lg mx-auto flex flex-col items-center justify-center mt-9 md:flex-row">
+      <div className=" max-w-screen-lg mx-auto mt-20 flex items-top justify-center">
         <img
-          className="w-16 animate-bounce md:mr-4"
+          className="w-16 animate-bounce max-sm:w-12"
           src="icons/bitcoin.png"
           alt="BTC"
         />
-        <p className="text-center text-white text-3xl md:text-6xl font-bold px-6">
+        <p className="text-center text-white text-6xl px-4 font-bold max-sm:mx-2">
           TRACK AND TRADE
         </p>
         <img
-          className="w-16 animate-bounce md:ml-4"
+          className="w-16 animate-bounce max-sm:w-12"
           src="icons/ethereum.png"
           alt="ETH"
         />
