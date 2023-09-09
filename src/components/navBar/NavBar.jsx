@@ -15,7 +15,7 @@ export default function NavBar() {
             Market
           </a>
           <a href="#" className="nav_links">
-            Choose Up
+            Choose Us
           </a>
           <a href="#" className="nav_links">
             Join

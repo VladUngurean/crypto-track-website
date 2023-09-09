@@ -21,24 +21,24 @@ function CryptoTable({ itemsPerPage, data }) {
   const totalPages = Math.ceil(data.length / itemsPerPage);
 
   return (
-    <div className="max-w-screen-lg mx-auto bg-gray-900 text-white shadow overflow-hidden sm:rounded-lg">
+    <div className="max-w-screen-lg mx-auto text-white shadow overflow-hidden sm:rounded-lg">
       <div className="px-4 py-5 sm:px-6">
         <h3 className="text-3xl leading-6 font-medium">Market Update</h3>
       </div>
-      <div className="border-t border-gray-800">
-        <table className="min-w-full">
+      <div>
+        <table className="min-w-full ">
           <thead>
             <tr className="bg-gradient-to-r from-[#2100fc] to-[#ff00ff]">
-              <th className="px-6 py-3  text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
                 Name
               </th>
-              <th className="px-6 py-3  text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
                 Current Price
               </th>
-              <th className="px-6 py-3  text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
                 24h Change
               </th>
-              <th className="px-6 py-3  text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+              <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
                 Market Cap
               </th>
             </tr>
@@ -47,7 +47,7 @@ function CryptoTable({ itemsPerPage, data }) {
             {displayData.map((list, index) => (
               <tr
                 key={index}
-                className="bg-gray-700 hover:bg-gray-800 transition duration-150 ease-in-out"
+                className="hover:bg-gray-800 transition duration-150 ease-in-out border-y"
               >
                 <td className="px-6 py-4 whitespace-no-wrap">
                   <div className="flex items-center">
@@ -92,7 +92,7 @@ function CryptoTable({ itemsPerPage, data }) {
         </table>
       </div>
       {/* Centered Pagination controls */}
-      <div className="px-4 py-3 bg-gray-800 text-center">
+      <div className="px-4 py-3 text-center">
         <button
           onClick={() => setCurrentPage(currentPage - 1)}
           disabled={currentPage === 1}
