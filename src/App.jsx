@@ -4,7 +4,7 @@ import Header from "./components/boody/head/Header";
 import { useEffect, useState } from "react";
 
 import Carousel from "./components/boody/head/Carousel";
-import CryptoTable from "./components/boody/market/CryptoTable";
+import CryptoTable from "./components/boody/CryptoTable";
 
 function App() {
   const [cryptoData, setCryptoData] = useState([]);
