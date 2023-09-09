@@ -3,7 +3,7 @@ export default function Header() {
     <>
       <div className=" max-w-screen-lg mx-auto mt-20 flex items-top justify-center">
         <img
-          className="w-16 animate-bounce max-sm:w-12"
+          className="w-16 animate-shake max-sm:w-12"
           src="icons/bitcoin.png"
           alt="BTC"
         />
@@ -11,7 +11,7 @@ export default function Header() {
           TRACK AND TRADE
         </p>
         <img
-          className="w-16 animate-bounce max-sm:w-12"
+          className="w-16 animate-shake max-sm:w-12"
           src="icons/ethereum.png"
           alt="ETH"
         />
