@@ -22,12 +22,12 @@ function Carousel() {
 
   const items = records.map((list, index) => (
     <div
-      className=" list-none flex  flex-col items-center justify-center"
+      className="  list-none flex  flex-col items-center justify-center"
       key={index}
     >
-      <img className=" w-16" src={list.image} alt="ggg" />
-      <div className="ml-4">
-        <div className=" text-sm font-bold">
+      <img className=" w-16" src={list.image} alt="coin" />
+      <div className=" text-center">
+        <div className=" text-white text-sm font-bold">
           {list.name}{" "}
           <span
             className={` font-bold ${
@@ -39,7 +39,7 @@ function Carousel() {
             {list.market_cap_change_percentage_24h.toFixed(2)}%
           </span>
         </div>
-        <div className="font-bold">
+        <div className="text-white font-bold">
           $ {list.current_price.toLocaleString("en-US")}
         </div>
       </div>
@@ -48,7 +48,7 @@ function Carousel() {
 
   return (
     <>
-      <div className=" m-10">
+      <div className=" max-w-screen-xl mx-auto m-10">
         <AliceCarousel
           mouseTracking
           disableButtonsControls
