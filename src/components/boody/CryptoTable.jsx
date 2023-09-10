@@ -99,7 +99,7 @@ function CryptoTable({ itemsPerPage, data }) {
           </table>
         </div>
         {/* Centered Pagination controls */}
-        <div className=" flex flex-col justify-center items-center px-4 py-3 text-center">
+        <div className=" max-sm:flex max-sm:flex-col  justify-center items-center px-4 py-3 text-center">
           <button
             onClick={() => setCurrentPage(currentPage - 1)}
             disabled={currentPage === 1}
