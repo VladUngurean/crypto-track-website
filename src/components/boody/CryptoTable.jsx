@@ -34,8 +34,8 @@ function CryptoTable({ itemsPerPage, data }) {
       <div className="max-w-screen-lg mx-auto text-white shadow overflow-hidden rounded-lg">
         <div>
           <table className="min-w-full">
-            <thead>
-              <tr className="bg-gradient-to-r from-[#2100fc] to-[#ff00ff]">
+            <thead className="bg-gradient-to-r from-[#2100fc] to-[#ff00ff]">
+              <tr>
                 <th className="px-2 py-2 sm:px-6 sm:py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
                   Name
                 </th>
@@ -112,7 +112,7 @@ function CryptoTable({ itemsPerPage, data }) {
               <button
                 key={i}
                 onClick={() => setCurrentPage(i + 1)}
-                className={`px-3 py-2 text-sm leading-5  ${
+                className={`px-3 py-2 text-sm leading-5 ${
                   currentPage === i + 1
                     ? "bg-gradient-to-t from-[#2100fc] to-[#ff00ff] text-gray-200 rounded"
                     : "bg-white text-black hover:bg-gradient-to-t from-[#2100fc] to-[#ff00ff]  hover:opacity-70 hover:text-gray-200 rounded"
