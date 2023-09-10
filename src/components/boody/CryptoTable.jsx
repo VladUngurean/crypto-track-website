@@ -32,7 +32,7 @@ function CryptoTable({ itemsPerPage, data }) {
         </h3>
       </div>
       <div className="max-w-screen-lg mx-auto text-white shadow overflow-hidden rounded-lg">
-        <div>
+        <div className="min-h-[620px]">
           <table className="min-w-full">
             <thead className="bg-gradient-to-r from-[#2100fc] to-[#ff00ff]">
               <tr>
@@ -99,11 +99,11 @@ function CryptoTable({ itemsPerPage, data }) {
           </table>
         </div>
         {/* Centered Pagination controls */}
-        <div className="px-4 py-3 text-center">
+        <div className=" flex flex-col justify-center items-center px-4 py-3 text-center">
           <button
             onClick={() => setCurrentPage(currentPage - 1)}
             disabled={currentPage === 1}
-            className=" mr-2 inline-flex items-center px-2 sm:px-3 sm:py-2 border border-black text-sm sm:text-base leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
+            className="mr-2 px-2 py-1 max-sm:w-[80px] max-sm:mb-1 max-sm:mr-0 sm:px-3 sm:py-2 border border-black text-sm sm:text-base leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
           >
             Previous
           </button>
@@ -125,7 +125,7 @@ function CryptoTable({ itemsPerPage, data }) {
           <button
             onClick={() => setCurrentPage(currentPage + 1)}
             disabled={currentPage >= totalPages}
-            className=" ml-2 inline-flex items-center px-2 py-1 sm:px-3 sm:py-2 border border-black text-sm sm:text-base leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
+            className="ml-2 px-2 py-1 max-sm:w-[80px] max-sm:mt-1 max-sm:ml-0 sm:px-3 sm:py-2 border border-black text-sm sm:text-base leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
           >
             Next
           </button>
