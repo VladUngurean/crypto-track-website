@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <div className=" max-w-screen-lg mx-auto  mt-20 flex items-center justify-center">
+      <div className=" max-w-screen-lg mx-auto  mt-20 flex items-center justify-center max-sm:mx-4">
         <img
           className="w-16 animate-shake max-sm:w-12 max-sm:h-12 max-lg:w-12"
           src="icons/bitcoin.png"
