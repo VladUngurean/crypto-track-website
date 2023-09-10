@@ -26,7 +26,10 @@ function CryptoTable({ itemsPerPage, data }) {
 
   return (
     <>
-      <div className="max-w-screen-lg mx-auto px-4 py-5 sm:px-6 text-white">
+      <div
+        id="cryptoTable"
+        className="max-w-screen-lg mx-auto px-4 py-5 sm:px-6 text-white"
+      >
         <h3 className="text-3xl leading-6 font-medium">
           Market Update <span className="text-sm leading-6">Every 60s</span>
         </h3>

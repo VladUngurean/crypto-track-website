@@ -3,7 +3,10 @@ import React from "react";
 const JoinDiscord = () => {
   return (
     <>
-      <div className="flex justify-center items-center flex-col mb-40">
+      <div
+        id="joinDiscord"
+        className="flex justify-center items-center flex-col mb-40"
+      >
         <div className=" max-w-screen-lg mx-auto mt-20 flex items-top justify-center">
           <img
             className="w-16 animate-shake max-lg:w-12"

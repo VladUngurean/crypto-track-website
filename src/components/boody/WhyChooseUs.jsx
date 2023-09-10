@@ -12,7 +12,10 @@ import {
 function WhyChooseUs() {
   return (
     <>
-      <div className="flex justify-center items-center flex-col mb-60">
+      <div
+        id="whyChooseUs"
+        className="flex justify-center items-center flex-col mb-60"
+      >
         <div className="flex text-center text-6xl font-extrabold text-white my-20 max-sm:text-4xl">
           WHY
           <p className="ml-4 text-center text-transparent bg-clip-text text-6xl font-extrabold bg-gradient-to-r from-[#2100fc] to-[#ff00ff] max-sm:text-4xl">
