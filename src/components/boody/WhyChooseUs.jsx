@@ -13,16 +13,16 @@ function WhyChooseUs() {
   return (
     <>
       <div className="flex justify-center items-center flex-col mb-60">
-        <p className="flex text-center text-6xl font-extrabold text-white my-20">
+        <div className="flex text-center text-6xl font-extrabold text-white my-20 max-sm:text-4xl">
           WHY
-          <p className="ml-4 text-center text-transparent bg-clip-text text-6xl font-extrabold bg-gradient-to-r from-[#2100fc] to-[#ff00ff]">
+          <p className="ml-4 text-center text-transparent bg-clip-text text-6xl font-extrabold bg-gradient-to-r from-[#2100fc] to-[#ff00ff] max-sm:text-4xl">
             CHOOSE US
           </p>
-        </p>
+        </div>
 
-        <div className="flex flex-row justify-center items-center">
-          <div className="text-white">
-            <div className="flex flex-row justify-center items-center">
+        <div className="flex flex-row max-sm:flex-col justify-center items-center">
+          <div className="text-white relative z-10 mr-[450px] max-lg:mr-[300px]">
+            <div className="w-[260px] h-[120px] flex flex-row justify-center items-center">
               <span className=" mr-3 flex justify-center items-center w-[46px] h-[46px] bg-gradient-to-t from-[#2100fc] to-[#ff00ff] rounded-xl">
                 <FaWallet className="w-[27px] h-[27px]" />
               </span>
@@ -31,7 +31,7 @@ function WhyChooseUs() {
                 <p>Use Trust Wallet, Metamask or to connect to the app.</p>
               </span>
             </div>
-            <div className="my-20 flex flex-row justify-center items-center">
+            <div className="w-[260px] h-[120px] my-12 flex flex-row justify-center items-center">
               <span className=" mr-3 flex justify-center items-center w-[46px] h-[46px] bg-gradient-to-t from-[#2100fc] to-[#ff00ff] rounded-xl">
                 <FaPencilRuler className="w-[27px] h-[27px]" />
               </span>
@@ -42,7 +42,7 @@ function WhyChooseUs() {
                 </p>
               </span>
             </div>
-            <div className="flex flex-row justify-center items-center">
+            <div className="w-[260px] h-[120px] flex flex-row justify-center items-center">
               <span className=" mr-3 flex justify-center items-center w-[46px] h-[46px] bg-gradient-to-t from-[#2100fc] to-[#ff00ff] rounded-xl">
                 <FaClipboard className="w-[27px] h-[27px]" />
               </span>
@@ -52,15 +52,15 @@ function WhyChooseUs() {
               </span>
             </div>
           </div>
-          <div>
+          <div className=" z-0 absolute top-auto left-auto w-[370px]">
             <img
-              className=" w-[450px] h-[500px]"
+              className=" w-[370px] h-[500px]"
               src="./images/cryptoHand.png"
               alt="img"
             />
           </div>
-          <div className=" text-white">
-            <div className="flex flex-row justify-center items-center">
+          <div className=" text-white relative z-10">
+            <div className="w-[260px] h-[120px] flex flex-row justify-center items-center">
               <span className=" mr-3 flex justify-center items-center w-[46px] h-[46px] bg-gradient-to-t from-[#2100fc] to-[#ff00ff] rounded-xl">
                 <FaSatelliteDish className="w-[27px] h-[27px]" />
               </span>
@@ -69,7 +69,7 @@ function WhyChooseUs() {
                 <p>Invest all your crypto at one place on one platform.</p>
               </span>
             </div>
-            <div className="my-20 flex flex-row justify-center items-center">
+            <div className="w-[260px] h-[120px] my-12 flex flex-row justify-center items-center">
               <span className=" mr-3 flex justify-center items-center w-[46px] h-[46px] bg-gradient-to-t from-[#2100fc] to-[#ff00ff] rounded-xl">
                 <FaChessKnight className="w-[27px] h-[27px]" />
               </span>
@@ -80,7 +80,7 @@ function WhyChooseUs() {
                 </p>
               </span>
             </div>
-            <div className="flex flex-row justify-center items-center">
+            <div className="w-[260px] h-[120px] flex flex-row justify-center items-center">
               <span className=" mr-3 flex justify-center items-center w-[46px] h-[46px] bg-gradient-to-t from-[#2100fc] to-[#ff00ff] rounded-xl">
                 <FaClone className="w-[27px] h-[27px]" />
               </span>

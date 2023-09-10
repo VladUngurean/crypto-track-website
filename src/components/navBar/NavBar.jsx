@@ -3,12 +3,12 @@ import { FaDiscord, FaTwitter } from "react-icons/fa";
 export default function NavBar() {
   return (
     <nav className="flex justify-center p-4 mx-11 max-sm:mx-2">
-      <div className="w-[1000px] flex justify-between">
-        <div className="mb-2 sm:mb-0">
+      <div className="w-full max-w-[1000px] flex justify-between max-md:flex-col max-md:justify-center max-md:items-center">
+        <div className="mb-2">
           <p className="text-2xl font-bold text-white">COINTRACK</p>
         </div>
-        <div className=" max-lg:hidden">
-          <a href="#" className="nav_links">
+        <div className="">
+          <a href="#" className="nav_links ml-0">
             Home
           </a>
           <a href="#" className="nav_links">
@@ -21,7 +21,7 @@ export default function NavBar() {
             Join
           </a>
         </div>
-        <div className=" w-[70px] flex justify-between max-lg:hidden">
+        <div className="mt-2 w-[70px] flex justify-between">
           <FaTwitter className=" w-6 h-full text-white" />
           <FaDiscord className=" w-6 h-full text-white" />
         </div>

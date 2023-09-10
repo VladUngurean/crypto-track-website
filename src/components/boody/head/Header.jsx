@@ -3,13 +3,13 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <div className=" max-w-screen-lg mx-auto mt-20 flex items-top justify-center">
+      <div className=" max-w-screen-lg mx-auto  mt-20 flex items-center justify-center">
         <img
-          className="w-16 animate-shake max-lg:w-12"
+          className="w-16 animate-shake max-sm:w-12 max-sm:h-12 max-lg:w-12"
           src="icons/bitcoin.png"
           alt="BTC"
         />
-        <p className="text-center text-white text-6xl px-4 font-bold max-lg:text-5xl">
+        <p className="text-center text-white text-6xl px-4 font-bold max-sm:text-4xl max-lg:text-5xl">
           TRACK AND TRADE
         </p>
         <img
