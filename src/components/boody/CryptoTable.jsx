@@ -28,24 +28,24 @@ function CryptoTable({ itemsPerPage, data }) {
     <>
       <div className="max-w-screen-lg mx-auto px-4 py-5 sm:px-6 text-white">
         <h3 className="text-3xl leading-6 font-medium">
-          Market Update <span className=" text-sm leading-6">Every 60s</span>
+          Market Update <span className="text-sm leading-6">Every 60s</span>
         </h3>
       </div>
       <div className="max-w-screen-lg mx-auto text-white shadow overflow-hidden rounded-lg">
         <div>
-          <table className="min-w-full ">
+          <table className="min-w-full">
             <thead>
               <tr className="bg-gradient-to-r from-[#2100fc] to-[#ff00ff]">
-                <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+                <th className="px-2 py-2 sm:px-6 sm:py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
                   Name
                 </th>
-                <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+                <th className="px-2 py-2 sm:px-6 sm:py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
                   Current Price
                 </th>
-                <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+                <th className="px-2 py-2 sm:px-6 sm:py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
                   24h Change
                 </th>
-                <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
+                <th className="px-2 py-2 sm:px-6 sm:py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
                   Market Cap
                 </th>
               </tr>
@@ -56,30 +56,30 @@ function CryptoTable({ itemsPerPage, data }) {
                   key={index}
                   className="hover:bg-gray-800 transition duration-150 ease-in-out border-b"
                 >
-                  <td className="px-6 py-4 whitespace-no-wrap">
+                  <td className="px-2 py-2 sm:px-6 sm:py-4 whitespace-no-wrap">
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <img
-                          className="h-12 w-12 rounded-full"
+                          className="h-8 w-8 sm:h-12 sm:w-12 rounded-full"
                           src={list.image}
                           alt="Crypto Image"
                         />
                       </div>
-                      <div className="ml-4">
+                      <div className="ml-2 sm:ml-4">
                         <div className="text-sm leading-5 font-medium text-gray-100">
                           {list.name}
                         </div>
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-no-wrap">
+                  <td className="px-2 py-2 sm:px-6 sm:py-4 whitespace-no-wrap">
                     <div className="text-sm leading-5 text-gray-100">
                       $ {list.current_price.toLocaleString("en-US")}
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-no-wrap">
+                  <td className="px-2 py-2 sm:px-6 sm:py-4 whitespace-no-wrap">
                     <span
-                      className={` text-sm leading-5 ${
+                      className={`text-sm leading-5 ${
                         list.market_cap_change_percentage_24h >= 0
                           ? "text-green-600"
                           : "text-red-600"
@@ -88,9 +88,9 @@ function CryptoTable({ itemsPerPage, data }) {
                       {list.market_cap_change_percentage_24h.toFixed(2)}%
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-no-wrap">
+                  <td className="px-2 py-2 sm:px-6 sm:py-4 whitespace-no-wrap">
                     <div className="text-sm leading-5 text-gray-100">
-                      $ {list.market_cap.toLocaleString("en-US")}
+                      ${list.market_cap.toLocaleString("en-US")}
                     </div>
                   </td>
                 </tr>
@@ -103,7 +103,7 @@ function CryptoTable({ itemsPerPage, data }) {
           <button
             onClick={() => setCurrentPage(currentPage - 1)}
             disabled={currentPage === 1}
-            className="mr-1 inline-flex items-center px-4 py-2 border border-black text-sm leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
+            className="mr-1 inline-flex items-center px-3 py-2 border border-black text-sm leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
           >
             Previous
           </button>
@@ -112,7 +112,7 @@ function CryptoTable({ itemsPerPage, data }) {
               <button
                 key={i}
                 onClick={() => setCurrentPage(i + 1)}
-                className={`px-3 py-2 text-sm leading-5 ${
+                className={`px-3 py-2 text-sm leading-5  ${
                   currentPage === i + 1
                     ? "bg-gradient-to-t from-[#2100fc] to-[#ff00ff] text-gray-200 rounded"
                     : "bg-white text-black hover:bg-gradient-to-t from-[#2100fc] to-[#ff00ff]  hover:opacity-70 hover:text-gray-200 rounded"
@@ -125,7 +125,7 @@ function CryptoTable({ itemsPerPage, data }) {
           <button
             onClick={() => setCurrentPage(currentPage + 1)}
             disabled={currentPage >= totalPages}
-            className="ml-1 inline-flex items-center px-4 py-2 border border-black text-sm leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
+            className="ml-1 inline-flex items-center px-3 py-2 border border-black text-sm leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
           >
             Next
           </button>
