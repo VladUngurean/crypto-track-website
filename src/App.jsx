@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 
 import Carousel from "./components/boody/head/Carousel";
 import CryptoTable from "./components/boody/CryptoTable";
+import WhyChooseUs from "./components/boody/WhyChooseUs";
+import JoinDiscord from "./components/JoinDiscord";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [cryptoData, setCryptoData] = useState([]);
@@ -25,6 +28,9 @@ function App() {
       <Header />
       <Carousel />
       <CryptoTable itemsPerPage={itemsPerPage} data={cryptoData} />
+      <WhyChooseUs />
+      <JoinDiscord />
+      <Footer />
     </>
   );
 }

@@ -48,7 +48,7 @@ function Carousel() {
 
   return (
     <>
-      <div className=" max-w-screen-xl mt-20 mb-40">
+      <div className=" max-w-screen-xl mt-20 mb-40 mx-auto">
         <AliceCarousel
           mouseTracking
           disableButtonsControls

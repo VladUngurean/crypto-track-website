@@ -7,7 +7,7 @@ export default function NavBar() {
         <div className="mb-2 sm:mb-0">
           <p className="text-2xl font-bold text-white">COINTRACK</p>
         </div>
-        <div className=" max-sm:hidden">
+        <div className=" max-lg:hidden">
           <a href="#" className="nav_links">
             Home
           </a>
@@ -21,7 +21,7 @@ export default function NavBar() {
             Join
           </a>
         </div>
-        <div className=" w-[70px] flex justify-between max-sm:hidden">
+        <div className=" w-[70px] flex justify-between max-lg:hidden">
           <FaTwitter className=" w-6 h-full text-white" />
           <FaDiscord className=" w-6 h-full text-white" />
         </div>
