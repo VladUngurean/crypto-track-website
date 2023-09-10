@@ -103,7 +103,7 @@ function CryptoTable({ itemsPerPage, data }) {
           <button
             onClick={() => setCurrentPage(currentPage - 1)}
             disabled={currentPage === 1}
-            className="mr-1 inline-flex items-center px-3 py-2 border border-black text-sm leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
+            className=" mr-2 inline-flex items-center px-2 sm:px-3 sm:py-2 border border-black text-sm sm:text-base leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
           >
             Previous
           </button>
@@ -112,7 +112,7 @@ function CryptoTable({ itemsPerPage, data }) {
               <button
                 key={i}
                 onClick={() => setCurrentPage(i + 1)}
-                className={`px-3 py-2 text-sm leading-5 ${
+                className={`px-2 py-1 sm:px-3 sm:py-2 text-xs sm:text-sm leading-5 ${
                   currentPage === i + 1
                     ? "bg-gradient-to-t from-[#2100fc] to-[#ff00ff] text-gray-200 rounded"
                     : "bg-white text-black hover:bg-gradient-to-t from-[#2100fc] to-[#ff00ff]  hover:opacity-70 hover:text-gray-200 rounded"
@@ -125,7 +125,7 @@ function CryptoTable({ itemsPerPage, data }) {
           <button
             onClick={() => setCurrentPage(currentPage + 1)}
             disabled={currentPage >= totalPages}
-            className="ml-1 inline-flex items-center px-3 py-2 border border-black text-sm leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
+            className=" ml-2 inline-flex items-center px-2 py-1 sm:px-3 sm:py-2 border border-black text-sm sm:text-base leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
           >
             Next
           </button>
