@@ -8,6 +8,7 @@ import CryptoTable from "./components/boody/CryptoTable";
 import WhyChooseUs from "./components/boody/WhyChooseUs";
 import JoinDiscord from "./components/JoinDiscord";
 import Footer from "./components/footer/Footer";
+import ScrollToTopButton from "./components/ScrollToTop";
 
 function App() {
   const [cryptoData, setCryptoData] = useState([]);
@@ -31,6 +32,7 @@ function App() {
       <WhyChooseUs />
       <JoinDiscord />
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }

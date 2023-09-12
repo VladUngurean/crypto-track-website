@@ -8,10 +8,7 @@ export default function NavBar() {
           <p className="text-2xl font-bold text-white">COINTRACK</p>
         </div>
         <div className="flex justify-center items-center">
-          <a href="#homePage" className="nav_links ml-0">
-            Home
-          </a>
-          <a href="#cryptoTable" className="nav_links">
+          <a href="#cryptoTable" className="nav_links ml-0">
             Market
           </a>
           <a href="#whyChooseUs" className="nav_links">
