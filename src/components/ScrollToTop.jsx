@@ -1,11 +1,9 @@
-// src/components/ScrollToTopButton.js
 import React, { useState, useEffect } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show the button when the user scrolls down halfway through the page
   useEffect(() => {
     const scrollHandler = () => {
       if (window.scrollY > window.innerHeight / 2) {

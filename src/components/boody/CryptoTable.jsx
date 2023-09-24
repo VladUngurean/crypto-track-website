@@ -5,7 +5,6 @@ function CryptoTable({ itemsPerPage, data }) {
   const [displayData, setDisplayData] = useState([]);
 
   useEffect(() => {
-    // Ensure data is available before setting displayData
     if (data.length > 0) {
       const indexOfLastItem = currentPage * itemsPerPage;
       const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -14,7 +13,6 @@ function CryptoTable({ itemsPerPage, data }) {
   }, [currentPage, data, itemsPerPage]);
 
   if (!data.length) {
-    // If data is not available yet, you can show a loading message or spinner
     return (
       <div className="flex justify-center text-white text-2xl animate-pulse">
         Loading...
@@ -101,7 +99,6 @@ function CryptoTable({ itemsPerPage, data }) {
             </tbody>
           </table>
         </div>
-        {/* Centered Pagination controls */}
         <div className=" max-sm:flex max-sm:flex-col  justify-center items-center px-4 py-3 text-center">
           <button
             onClick={() => setCurrentPage(currentPage - 1)}

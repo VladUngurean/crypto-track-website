@@ -6,4 +6,16 @@
   .nav_links {
     @apply text-lg font-semibold ml-6 text-white;
   }
+  .whyChooseUs_card_container {
+    @apply w-[280px] h-[120px] flex flex-row justify-center items-center max-lg:border-2 max-lg:border-gray-300  max-lg:bg-gray-300 max-lg:bg-opacity-30 max-lg:rounded max-lg:shadow-[10px_10px_10px_rgba(0,0,0,0.15)];
+  }
+  .whyChooseUs_card_containerMid {
+    @apply w-[280px] h-[120px] my-12 flex flex-row justify-center items-center max-lg:border-2 max-lg:border-gray-300  max-lg:bg-gray-300 max-lg:bg-opacity-30 max-lg:rounded max-lg:shadow-[10px_10px_10px_rgba(0,0,0,0.15)];
+  }
+  .whyChooseUs_card_container-icon {
+    @apply mr-3 flex justify-center items-center w-[46px] h-[46px] bg-gradient-to-t from-[#2100fc] to-[#ff00ff] rounded-xl;
+  }
+  .whyChooseUs_card_container-iconSize {
+    @apply w-[27px] h-[27px] text-white;
+  }
 }
