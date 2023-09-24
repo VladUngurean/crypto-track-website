@@ -25,7 +25,7 @@ const JoinDiscord = () => {
         <div className=" max-w-screen-lg mx-auto flex items-center justify-center">
           <p className="boldGradiendText">DISCORD</p>
         </div>
-        <p className=" text-white my-10">
+        <p className=" text-center text-white font-mono my-10 max-sm:max-w-[280px]">
           Invest and manage all your crypto at one place.
         </p>
         <button className="font-extrabold mb-8 bg-gradient-to-t from-[#2100fc] to-[#ff00ff] rounded-3xl px-7 py-4 text-white">
