@@ -35,7 +35,7 @@ function CryptoTable({ itemsPerPage, data }) {
       <div className="max-w-screen-lg mx-auto text-white shadow overflow-hidden rounded-lg">
         <div className="min-h-[620px]">
           <table className="min-w-full">
-            <thead className="bg-gradient-to-r from-[#2100fc] to-[#ff00ff]">
+            <thead className="bg-gradient-to-b from-[#2100fc] to-[#ff00ff]">
               <tr>
                 <th className="cryptoTable_tableHead">Name</th>
                 <th className="cryptoTable_tableHead">Current Price</th>
