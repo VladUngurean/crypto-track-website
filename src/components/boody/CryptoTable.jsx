@@ -37,18 +37,10 @@ function CryptoTable({ itemsPerPage, data }) {
           <table className="min-w-full">
             <thead className="bg-gradient-to-r from-[#2100fc] to-[#ff00ff]">
               <tr>
-                <th className="px-2 py-2 sm:px-6 sm:py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
-                  Name
-                </th>
-                <th className="px-2 py-2 sm:px-6 sm:py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
-                  Current Price
-                </th>
-                <th className="px-2 py-2 sm:px-6 sm:py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
-                  24h Change
-                </th>
-                <th className="px-2 py-2 sm:px-6 sm:py-3 text-left text-xs leading-4 font-medium text-gray-300 uppercase tracking-wider">
-                  Market Cap
-                </th>
+                <th className="cryptoTable_tableHead">Name</th>
+                <th className="cryptoTable_tableHead">Current Price</th>
+                <th className="cryptoTable_tableHead">24h Change</th>
+                <th className="cryptoTable_tableHead">Market Cap</th>
               </tr>
             </thead>
             <tbody>
@@ -57,7 +49,7 @@ function CryptoTable({ itemsPerPage, data }) {
                   key={index}
                   className="hover:bg-gray-800 transition duration-150 ease-in-out border-b"
                 >
-                  <td className="px-2 py-2 sm:px-6 sm:py-4 whitespace-no-wrap">
+                  <td className="cryptoTable_tableCell">
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <img
@@ -73,12 +65,12 @@ function CryptoTable({ itemsPerPage, data }) {
                       </div>
                     </div>
                   </td>
-                  <td className="px-2 py-2 sm:px-6 sm:py-4 whitespace-no-wrap">
+                  <td className="cryptoTable_tableCell">
                     <div className="text-sm leading-5 text-gray-100">
                       $ {list.current_price.toLocaleString("en-US")}
                     </div>
                   </td>
-                  <td className="px-2 py-2 sm:px-6 sm:py-4 whitespace-no-wrap">
+                  <td className="cryptoTable_tableCell">
                     <span
                       className={`text-sm leading-5 ${
                         list.market_cap_change_percentage_24h >= 0
@@ -89,7 +81,7 @@ function CryptoTable({ itemsPerPage, data }) {
                       {list.market_cap_change_percentage_24h.toFixed(2)}%
                     </span>
                   </td>
-                  <td className="px-2 py-2 sm:px-6 sm:py-4 whitespace-no-wrap">
+                  <td className="cryptoTable_tableCell">
                     <div className="text-sm leading-5 text-gray-100">
                       ${list.market_cap.toLocaleString("en-US")}
                     </div>
@@ -103,7 +95,7 @@ function CryptoTable({ itemsPerPage, data }) {
           <button
             onClick={() => setCurrentPage(currentPage - 1)}
             disabled={currentPage === 1}
-            className="mr-2 px-2 py-1 max-sm:w-[80px] max-sm:mb-1 max-sm:mr-0 sm:px-3 sm:py-2 border border-black text-sm sm:text-base leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
+            className="paginationButton_previous"
           >
             Previous
           </button>
@@ -125,7 +117,7 @@ function CryptoTable({ itemsPerPage, data }) {
           <button
             onClick={() => setCurrentPage(currentPage + 1)}
             disabled={currentPage >= totalPages}
-            className="ml-2 px-2 py-1 max-sm:w-[80px] max-sm:mt-1 max-sm:ml-0 sm:px-3 sm:py-2 border border-black text-sm sm:text-base leading-5 font-medium rounded-md text-black bg-white hover:bg-gradient-to-t from-[#ff00ff] to-[#2100fc] hover:text-gray-200 focus:outline-none focus:ring focus:border-blue-300 active:bg-gray-900 active:text-gray-200 transition ease-in-out duration-150"
+            className="paginationButton_next"
           >
             Next
           </button>

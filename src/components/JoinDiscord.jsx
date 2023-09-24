@@ -7,7 +7,7 @@ const JoinDiscord = () => {
         id="joinDiscord"
         className="flex justify-center items-center flex-col mb-40"
       >
-        <div className=" max-w-screen-lg mx-auto mt-20 flex items-top justify-center">
+        <div className=" max-w-screen-lg mx-auto flex items-top justify-center">
           <img
             className="w-16 animate-shake max-lg:w-12"
             src="icons/bitcoin.png"
@@ -23,14 +23,12 @@ const JoinDiscord = () => {
           />
         </div>
         <div className=" max-w-screen-lg mx-auto flex items-center justify-center">
-          <p className="text-center text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#2100fc] to-[#ff00ff] max-sm:text-4xl max-lg:text-5xl">
-            DISCORD
-          </p>
+          <p className="boldGradiendText">DISCORD</p>
         </div>
         <p className=" text-white my-10">
           Invest and manage all your crypto at one place.
         </p>
-        <button className="font-extrabold bg-gradient-to-t from-[#2100fc] to-[#ff00ff] rounded-3xl px-7 py-4 text-white">
+        <button className="font-extrabold mb-8 bg-gradient-to-t from-[#2100fc] to-[#ff00ff] rounded-3xl px-7 py-4 text-white">
           Join Via Discord
         </button>
       </div>

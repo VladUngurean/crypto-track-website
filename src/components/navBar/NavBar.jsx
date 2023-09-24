@@ -8,19 +8,19 @@ export default function NavBar() {
           <p className="text-2xl font-bold text-white">COINTRACK</p>
         </div>
         <div className="flex justify-center items-center">
-          <a href="#cryptoTable" className="nav_links ml-0">
+          <a href="#cryptoTable" className="navBar_links ml-0">
             Market
           </a>
-          <a href="#whyChooseUs" className="nav_links">
+          <a href="#whyChooseUs" className="navBar_links">
             Choose Us
           </a>
-          <a href="#joinDiscord" className="nav_links">
+          <a href="#joinDiscord" className="navBar_links">
             Join
           </a>
         </div>
         <div className="mt-0 w-[70px] flex justify-between">
-          <FaTwitter className="w-6 h-full text-white" />
-          <FaDiscord className="w-6 h-full text-white" />
+          <FaTwitter className="navBar_faIcons" />
+          <FaDiscord className="navBar_faIcons" />
         </div>
       </div>
     </nav>

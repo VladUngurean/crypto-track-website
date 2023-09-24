@@ -10,16 +10,16 @@ const Footer = () => {
         </div>
         <div className="text-white max-sm:text-yellow-400 w-[200px] flex flex-row justify-between relative z-10">
           <span className="h-[60px]">
-            <FaTwitter className="w-[50px] h-[30px]" />
+            <FaTwitter className="footerFaIcons" />
           </span>
           <span>
-            <FaDiscord className="w-[50px] h-[30px]" />
+            <FaDiscord className="footerFaIcons" />
           </span>
           <span>
-            <FaFacebook className="w-[50px] h-[30px]" />
+            <FaFacebook className="footerFaIcons" />
           </span>
           <span>
-            <FaYoutube className="w-[50px] h-[30px]" />
+            <FaYoutube className="footerFaIcons" />
           </span>
         </div>
         <div className="w-[300px] flex justify-end absolute z-0 bottom-0 right-0">

@@ -19,9 +19,7 @@ const Header = () => {
         />
       </div>
       <div className="max-w-screen-lg mx-auto flex items-center justify-center">
-        <p className="text-center text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#2100fc] to-[#ff00ff] max-lg:text-5xl">
-          CRYPTO CURRENCIES
-        </p>
+        <p className="boldGradiendText">CRYPTO CURRENCIES</p>
       </div>
     </>
   );
